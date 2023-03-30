@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '../components/Home.vue';
-import NewPage from '../components/NewPage.vue';
-import NewPage2 from '../components/NewPage2.vue';
+import Home from '../views/Home.vue';
+import NewPage from '../views/NewPage.vue';
+import About from '../views/About.vue';
 
 const routes = [
   {
@@ -21,11 +21,11 @@ const routes = [
     },
   },
   {
-    path: '/new-page2',
-    name: 'NewPage2',
-    component: NewPage2,
+    path: '/about',
+    name: 'About',
+    component: About,
     meta: {
-      title: 'NewPage2'
+      title: 'About'
     },
   },
 ];

@@ -10,13 +10,13 @@ const count = ref(0)
 
 <template>
 
-  <div>
+  <div class="logo-group">
     <a href="https://vitejs.dev" target="_blank">
-    <img src="../../public/vite.svg" class="logo" alt="Vite logo" />
-  </a>
-  <a href="https://vuejs.org/" target="_blank">
-    <img src="../assets/vue.svg" class="logo vue" alt="Vue logo" />
-  </a>
+      <img src="../../public/vite.svg" class="logo-group__logo--img" alt="Vite logo" />
+    </a>
+    <a href="https://vuejs.org/" target="_blank">
+      <img src="../assets/vue.svg" class="logo-group__logo--img" alt="Vue logo" />
+    </a>
   </div>
 
   <h1>{{ msg }}</h1>
@@ -44,16 +44,24 @@ const count = ref(0)
 </template>
 
 <style scoped>
-.logo {
+/* Vue,Viteのロゴグループです */
+.logo-group {
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  width:100%;
+  align-items: center;
+}
+.logo-group__logo--img {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
-.logo:hover {
+.logo-group__logo--img:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
-.logo.vue:hover {
+.logo-group__logo--img.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
 }
 .read-the-docs {

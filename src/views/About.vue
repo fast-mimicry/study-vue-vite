@@ -1,12 +1,12 @@
 <template>
   <div>
-    <h1>New Page2</h1>
+    <h1>About</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NewPage2',
+  name: 'About',
   // data() {
   //   return {
   //     message: 'This is New Page 2',

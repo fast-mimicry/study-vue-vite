@@ -11,16 +11,22 @@
     <title>Vite + Vue</title>
   </head>
 
-  <div class="app-container">
-    <!-- Headerです -->
+  <!-- rootです -->
+  <div id="app" class="app-container">
+
+    <!-- ナビゲーションHeaderです -->
     <nav>
-      <ul class="link">
+      <ul class="header">
         <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
+        <li><router-link :to="{ name: 'About' }">About</router-link></li>
         <li><router-link :to="{ name: 'NewPage' }">New Page</router-link></li>
-        <li><router-link :to="{ name: 'NewPage2' }">New Page 2</router-link></li>
       </ul>
     </nav>
-    <router-view />
+
+    <!-- 表示ページを返します -->
+    <div class="layout">
+      <router-view />
+    </div>
 
   </div>
 
@@ -28,31 +34,37 @@
 
 <style scoped>
 
-.app-container {
+/* root-containerのスタイルです */
+.layout {
   min-height: 90vh;
   display:flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.nav {
-  position: fixed;
-  top:0;
-  width: fit-content;
+/* ナビゲーションヘッダーです */
+nav {
   border-bottom: 1px solid #eaeaea;
 }
-
-.link {
+.header {
   display:flex;
-  justify-content: space-between;
-  /* flex-direction: row; */
+  justify-content: center;
+  flex-direction: row;
   width:100%;
+  height: 100%;
+  padding:0
 }
 
-.link li {
+.header li {
   width: fit-content;
   padding: 8px 24px;
   font-size: 1.2rem;
   list-style: none;
+}
+.header li:hover,
+.header li:focus,
+.header li:active {
+  color:#78a7dd;
+  border-color: #0070f3;
 }
 </style>
