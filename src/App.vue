@@ -3,7 +3,6 @@
 </script>
 
 <template>
-
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="." />
@@ -33,7 +32,6 @@
 </template>
 
 <style scoped>
-
 /* root-containerのスタイルです */
 .layout {
   min-height: 90vh;
