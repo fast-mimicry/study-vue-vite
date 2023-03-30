@@ -1,30 +1,58 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + Vue</title>
+  </head>
+
+  <div class="app-container">
+    <!-- Headerです -->
+    <nav>
+      <ul class="link">
+        <li><router-link :to="{ name: 'Home' }">Home</router-link></li>
+        <li><router-link :to="{ name: 'NewPage' }">New Page</router-link></li>
+        <li><router-link :to="{ name: 'NewPage2' }">New Page 2</router-link></li>
+      </ul>
+    </nav>
+    <router-view />
+
   </div>
-  <HelloWorld msg="Vite + Vue" />
+
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+
+.app-container {
+  min-height: 90vh;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+
+.nav {
+  position: fixed;
+  top:0;
+  width: fit-content;
+  border-bottom: 1px solid #eaeaea;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.link {
+  display:flex;
+  justify-content: space-between;
+  /* flex-direction: row; */
+  width:100%;
+}
+
+.link li {
+  width: fit-content;
+  padding: 8px 24px;
+  font-size: 1.2rem;
+  list-style: none;
 }
 </style>
